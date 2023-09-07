@@ -1,6 +1,6 @@
 //JUEGO: ADIVINAR EL NUMERO ENTRE 1 Y 100
 
-const nombreJugador = prompt("Por favor, ingresa tu nombre.")
+const nombreJugador = prompt("Por favor, ingresa tu nombre:")
 
 if (nombreJugador === null){
     alert("El juego se ha cancelado.")
@@ -26,13 +26,13 @@ if (nombreJugador === null){
 
         intentos++;
 
-        if (numeroUsuario === numeroAleatorio){
+        if (numeroJugador === numeroAleatorio){
             if (intentos < 5) {
                 alert(`¡Felicidades, ${nombreJugador}! Adivinaste el número ${numeroAleatorio} en solo ${intentos} intentos.`);
             } else {
                 alert(`¡Felicidades, ${nombreJugador}! Adivinaste el número ${numeroAleatorio} en ${intentos} intentos.`);
             }
-        } else if (numeroUsuario < numeroAleatorio){
+        } else if (numeroJugador < numeroAleatorio){
             alert('El número es mayor. Intenta de nuevo.');
             adivinarNumero();
         } else{
